@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var nodeMailer = require('nodemailer');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -56,5 +56,8 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(3000, () => {
+  console.log('Server started on port 3000');
+});
 
 module.exports = app;

@@ -2,6 +2,19 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    include ./partials/_nav.jade
+    include ./partials/showcase.jade
+    .container
+      block content
+
+      hr
+      footer
+        p &#169; 2015 Company, Inc.
+
+
+
+
+    script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
