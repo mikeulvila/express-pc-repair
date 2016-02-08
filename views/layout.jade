@@ -1,3 +1,7 @@
+- var HOMEPAGE = false;
+
+block variables
+
 doctype html
 html
   head
@@ -6,7 +10,8 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     include ./partials/_nav.jade
-    include ./partials/showcase.jade
+    if HOMEPAGE
+      include ./partials/showcase.jade
     .container
       block content
 
@@ -17,4 +22,5 @@ html
 
 
 
+    script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
