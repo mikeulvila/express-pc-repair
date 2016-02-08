@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Hardware Repair",
+    "description": "Fusce lacus libero, finibus a porta a, tempor eget odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+    "price_range": "$100 - $200"
+  },
+  {
+    "name": "Virus Removal",
+    "description": "Fusce lacus libero, finibus a porta a, tempor eget osipsum primis in faucibus.",
+    "price_range": "$100 - $1500"
+  },
+  {
+    "name": "PC Tune Up",
+    "description": "Fusce lacus libero, finibus a pot malesuada fames ac ante ipsum primis in faucibus.",
+    "price_range": "$50 - $80"
+  },
+  {
+    "name": "Network Services",
+    "description": "Fusce lacus libero, finibus a pot malesuada fames ac ante ipsum primis in faucibus.",
+    "price_range": "$220 - $880"
+  }
+]
