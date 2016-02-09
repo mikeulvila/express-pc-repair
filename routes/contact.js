@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 
+
 /* GET contact page. */
 router.get('/', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
@@ -11,16 +12,16 @@ router.get('/', function(req, res, next) {
 router.post('/send', function (req, res) {
   // create reusable transporter object using the default SMTP transport
   var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    service: 'Mailgun',
     auth: {
-      user: 'mikeulvila@gmail.com',
+      user: '',
       pass: ''
     }
   });
 
   // setup e-mail data with unicode symbols
   var mailOptions = {
-      from: 'Mike <mikeulvila@gmail.com>', // sender address
+      from: 'PC Repairs', // sender address
       to: 'mikeulvila@me.com', // list of receivers
       subject: 'Testing Nodemailer', // Subject line
       text: 'Info: ' + req.body.name + req.body.email + req.body.message, // plaintext body
@@ -32,9 +33,10 @@ router.post('/send', function (req, res) {
       if(error){
           return console.log(error);
           res.redirect('/');
-      }
+      } else {
       console.log('Message sent: ' + info.response);
       res.redirect('/');
+      }
 
   });
 
